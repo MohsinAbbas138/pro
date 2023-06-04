@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std; 
+class Distance{
+	
+	private: 
+	int a=3;
+	public: 
+	Distance ()
+	{
+		int a; 
+		a=a;
+	}
+	
+	void display_data()
+	{
+		
+		cout <<"The value of a: "<<a<<endl;
+	}
+	
+	friend void display_data2(Distance &d1);
+	
+};
+void display_data2(Distance &d1){
+	
+	d1.a=d1.a+5;
+	
+}
+int main ()
+{
+	Distance d1; 
+	d1.display_data();
+	display_data2(d1);
+	d1.display_data();
+	return 0;
+}
