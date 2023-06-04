@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std; 
+int main ()
+{
+	int a; 
+	int b; 
+	int c; 
+	try{
+		cout <<"Enter the 1st number "<<endl; 
+		cin>>a; 
+		cout <<"Enter the 2nd number "<<endl; 
+		cin>>b;
+		if (b==0)
+		{
+		throw "0 is not devided ";	
+		}
+		c=a/b;
+		 
+		cout <<"value of c "<<c<<endl; 
+		
+	}
+	catch (char *msg)
+	{
+		cout <<msg <<endl; 
+	}
+	return 0;
+}
