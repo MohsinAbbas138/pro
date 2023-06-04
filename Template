@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std; 
+template <class t>
+class vector {
+	t a; 
+	public: 
+	vector ()
+	{
+		// default constroctor 
+	}
+	vector (t a)
+	{
+		this->a=a;
+		cout <<"the value of a is: "<<a<<endl; 
+	}
+	
+	
+};
+int main ()
+{
+	vector <int>v1(1234);
+	vector <float>v2(233.56);
+	vector <char>v3('H');
+	vector <string>v4("Mohsin");
+	
+	return 0;
+	
+}
