@@ -1,0 +1,38 @@
+# include <iostream>
+using namespace std;
+int main() {
+    int choice;
+
+    while (true) {
+        std::cout << "Menu Options:" << std::endl;
+        std::cout << "1. Print help" << std::endl;
+        std::cout << "2. Print exchange stats" << std::endl;
+        std::cout << "3. Place an ask" << std::endl;
+        std::cout << "4. Place a bid" << std::endl;
+        std::cout << "5. Print wallet" << std::endl;
+     
+
+        std::cout << "Enter the number corresponding to your choice: ";
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1:
+             cout<<" printHelp"<<endl;
+                break;
+            case 2:
+                cout<<"printExchangeStats"<<endl;
+                break;
+            case 3:
+              cout<<"  placeAsk"<<endl;
+                break;
+            case 4:
+              cout<<"  placeBid"<<endl;
+                break;
+            case 5:
+                cout<<"printWallet"<<endl;
+                break;
+            default:
+                std::cout << "Invalid choice. Please try again." << std::endl;
+        }
+    }
+}
