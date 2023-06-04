@@ -1,0 +1,490 @@
+#include <iostream>
+#include <fstream>
+#include <iomanip>
+
+using namespace std; 
+
+class costumer{
+	 public:
+	 	
+string dish;
+int quantity;
+double price;
+double total=0;
+
+
+    costumer()
+    {
+	cout<<setw(50);
+    cout<<"AL-RAZA RESTURENT "<<endl;
+	cout<<setw(50); 
+	cout<<"Sultan Town Lahore"<<endl;
+	cout<<setw(50);
+	cout<<"-------------------"<<endl;
+	}
+	  
+void take_order()
+{
+	int n; 
+	cout <<"press 1 to take order............. "<<endl;
+	 
+	while (!(cin>>n))
+	{
+	cout <<"Error: Enter Any Intiger"<<endl;	
+		cin.clear();
+		cin.ignore();
+		
+	}
+	
+	while ((n>1)||(n<1))
+	{			
+		cout <<"This is the Invalid Number. so press 1 to take order..........  "<<endl;	
+		cin>> n;		
+			
+	}
+if(n==1) 
+{
+	 int h;
+	 char choice='y';
+        while (choice == 'y' || choice == 'Y') {
+        	
+        	
+  do{
+ cout<<"Welcome to the AL-Raza Resturent.......... "<<endl; 
+	
+
+    cout<<setw(50);
+	cout<<"MENU CARD  "<<endl;
+	cout<<setw(50); 
+	cout<<"----------- "<<endl;
+	
+	string menu[5];
+	menu[0]={"1) Bar.B.Q"};
+	menu[1]={"2) Fish"};
+	menu[2]={"3) Rolls"};
+	menu[3]={"4) Fast Food"};
+	menu[4]={"5) Ice Cream"}; 
+	 
+for(int i=0; i<5; i++)
+{
+	cout<<menu[i]<<endl; 
+}
+
+cout <<"Chose the type of order which you like to order "<<endl; 
+
+while (!(cin>>h))
+	{
+	cout <<"Error: Enter a Number "<<endl;	
+		cin.clear();
+		cin.ignore();
+		
+	}
+
+
+
+}while (h<1 || h>5);
+
+  switch (h)
+  {
+  	    case 1:
+  	    	
+  		cout <<"Bar.B.Q"<<endl;
+		    
+  		int a; 
+  		cout<<"Which dish would you want to try "<<endl;
+  		cout<<"1) Chicken Behari Boti"<<setw(10)<<"Rs.500 "<<endl;
+		cout<<"2) Chicken Malai Boti "<<setw(10)<<"Rs.600 "<<endl;    
+        cout<<"3) Chicken Tikka Boti "<<setw(10)<<"Rs.200 "<<endl;    
+        cout<<"4) Beef Behari Boti   "<<setw(10)<<"Rs.490 "<<endl;    
+        cout<<"5) Afghani Boti       "<<setw(10)<<"Rs.450 "<<endl;    
+        cout<<"6) Mutton Chops       "<<setw(10)<<"Rs.750 "<<endl;    
+
+  		while (!(cin>>a))
+  		{
+  		cout <<"Error: Enter Number "<<endl; 	
+  			cin.clear();
+  			cin.ignore();
+		}
+		
+		
+			
+  		switch(a)
+		{
+			    case 1:
+				dish="Chicken Behari Boti ";
+				 price=500;
+				break; 
+				
+				case 2:
+				dish="Chicken Malai Boti "; 
+				 price=600;
+				break; 
+
+
+                case 3:
+				dish="Chicken Tikka Boti ";
+				 price=200; 
+				break; 
+
+
+                case 4:
+				dish="Beef Behari Boti ";
+				 price=490; 
+				break; 
+
+
+                case 5:
+				dish="Afghani Boti ";
+				 price=450; 
+				break; 
+
+
+                case 6:
+				dish="Motton Chops ";
+				 price=750; 
+				break; 
+				
+				
+		        default:
+		        cout <<"invalid Number"<<endl; 
+				break;
+		 } 
+	
+  		break; 
+  		case 2:
+  		cout<<"Fish"<<endl;
+			int b; 
+  		cout<<"Which dish would you want to try "<<endl;
+  		cout<<"1) Finger Fish  "<<setw(10)<<"Rs.450 "<<endl;
+		cout<<"2) Grilled Fish "<<setw(10)<<"Rs.550 "<<endl;    
+        cout<<"3) Fish Handi   "<<setw(10)<<" Rs.1000 "<<endl;    
+        
+  		while (!(cin>>b))
+  		{
+  		cout <<"Error: Enter Number "<<endl; 	
+  			cin.clear();
+  			cin.ignore();
+		}
+  		switch(b)
+		{
+	            case 1:
+				dish="Finger Fish ";
+				price=450; 
+				break; 
+			
+			   case 2:
+			   	dish="Grilled Fish ";
+				   price=550; 
+			   	break;
+			   	
+			   	case 3:
+			   	dish="Fish Handi";
+				price=1000; 
+			    break;
+			    
+			    default:
+		        cout <<"invalid Number"<<endl; 	
+				break;		
+	    }
+		break; 
+		case 3:
+		cout<<"Rolls"<<endl;
+		int c; 
+  		cout<<"Which dish would you want to try "<<endl;
+  		cout<<"1) Chicken Roll        "<<setw(10)<<"Rs.100 "<<endl;
+		cout<<"2) Chicken cheese Roll "<<setw(10)<<"Rs.120 "<<endl;    
+        cout<<"3) Chicken Mayo Roll   "<<setw(10)<<"Rs.120 "<<endl;    
+        cout<<"4) Beef Roll           "<<setw(10)<<"Rs.100 "<<endl;    
+        cout<<"5) Beef Mayo Roll      "<<setw(10)<<"Rs.120 "<<endl;    
+        cout<<"6) Gyro                "<<setw(10)<<"Rs.160 "<<endl;    
+
+  	while (!(cin>>c))
+  		{
+  		cout <<"Error: Enter Number "<<endl; 	
+  			cin.clear();
+  			cin.ignore();
+		}
+  		switch(c)
+		{
+case 1:
+				dish="Chicken Roll";
+				price=100; 
+				break; 
+			
+case 2:
+				dish="Chicken Cheese Roll ";
+				price=120; 
+				break; 
+			
+case 3:
+				dish="Chicken Mayo Roll";
+				price=120; 
+				break; 
+			
+case 4:
+				dish="Beef Roll";
+				price=100; 
+				break; 
+			
+case 5:
+				dish=" Beef Mayo Roll";
+				price=120; 
+				break; 
+			
+case 6:
+				dish="Gyro";
+				price=160; 
+				break; 
+			
+		default:
+		cout <<"invalid Number"<<endl; 	
+		break;
+		
+}
+		break;  
+		case 4:
+		cout <<"Fast Food"<<endl;
+		int d; 
+		cout <<"Which dish would you want to try?" << endl;
+				cout <<"1) Chicken Burger           "<<setw(10)<<"Rs.170" << endl;
+				cout <<"2) Chicken Cheese Burger    "<<setw(10)<<"Rs.200" << endl;
+				cout <<"3) Crispy Zinger Burger     "<<setw(10)<<"Rs.230" << endl;
+				cout <<"4) Smoky Beef Burger        "<<setw(10)<<"Rs.180" << endl;
+				cout <<"5) Beef Cheese Burger       "<<setw(10)<<"Rs.210" << endl; 
+				cout <<"6) Grilled Chicken Sandwich "<<setw(10)<<"Rs.240" << endl;
+				cout <<"7) Club Sandwich            "<<setw(10)<<"Rs.250" << endl;
+				cout <<"8) Mexican Sandwich         "<<setw(10)<<"Rs.300" << endl;
+           while (!(cin>>d))
+  		{
+  		cout <<"Error: Enter Number "<<endl; 	
+  			cin.clear();
+  			cin.ignore();
+		}
+		switch(d)
+           {
+case 1:
+				dish="Chicken Burger";
+				price=170; 
+				break; 
+
+case 2:
+				dish="Chicken Cheese Burger";
+				price=200; 
+				break; 
+
+case 3:
+				dish="Crispy Zinger Burger";
+				price=230; 
+				break; 
+
+case 4:
+				dish="Smoky Beef Burger"; 
+				price=180;
+				break; 
+
+case 5:
+				dish="Beef Cheese Burger"; 
+				price=210;
+				break; 
+
+case 6:
+				dish="Grilled Chicken Sandwich";
+				price=240; 
+				break; 
+
+case 7:
+				dish="Club Sandwich";
+				price=250; 
+				break; 
+
+case 8:
+				dish="Mexican Sandwich";
+				price=300; 
+				break; 
+			
+		default:
+		cout <<"invalid Number"<<endl; 	
+		break;
+
+		   }
+		break;  
+		case 5: 
+		cout<<"Ice Cream"<<endl; 
+		
+			int e; 
+  		cout<<"Which Flavor would you want to try "<<endl;
+  		cout<<"1)  Mango Flavor       "<<setw(10)<<"Rs.250 "<<endl;
+		cout<<"2) Strawberry Flavor   "<<setw(10)<<"Rs.200 "<<endl;    
+        cout<<"3) Chocolate Flavor    "<<setw(10)<<"Rs.270"<<endl;    
+        
+  		while (!(cin>>e))
+  		{
+  		cout <<"Error: Enter Number "<<endl; 	
+  			cin.clear();
+  			cin.ignore();
+		}
+  		switch(e)
+		{
+	        case 1:
+				dish="Mango Flavor";
+				price=250; 
+	            break;
+				
+           case 2:
+				dish="Strawberry Flavor";
+				price=200; 
+	            break;
+
+           case 3:
+				dish="Chocolate Flavor"; 
+				price=270;
+	            break;
+				
+		   default: 
+				cout<<"Invalid Number "<<endl; 
+				break;
+	}
+		break; 
+		default:
+		cout <<"invalid Number"<<endl;
+		cin>>h;
+		break;
+	}
+
+cout <<"Enter the quantity"<<endl; 
+
+//cin>>quantity;
+
+while (!(cin>>quantity))
+{
+cout <<"Error: Enter Number"<<endl; 
+cin.clear();
+cin.ignore();	
+}	
+double subTotal = price * quantity;
+total += subTotal;
+
+                    cout << endl;
+                    cout << "Order Summary:" << endl;
+                    cout << "Dish: " << dish << endl;
+                    cout << "Quantity: " << quantity << endl;
+                    cout << "Price per dish: Rs." << price << endl;
+                    cout << "Subtotal: Rs." << subTotal << endl;
+                    cout << endl;
+                    ofstream billFile("Restruent.txt");
+                    billFile << "Dish: " << dish << endl;
+                    billFile << "Quantity: " << quantity << endl;
+                    billFile << "Price per dish: Rs." << price << endl;
+                    billFile << "Subtotal: Rs." << total << endl;
+                    
+                   billFile << "--------------------------------" << endl;
+                    billFile.close();
+         
+                    
+cout << "Do you want  another order? (Y/N): "<<endl;
+       //     cin >> choice;
+        while (!(cin>>choice))
+	{
+	cout <<"Error: Enter a Character "<<endl;	
+		cin.clear();
+		cin.ignore();
+		
+	}
+
+//........................
+}
+
+}
+
+}
+	~costumer()
+	{
+		//this is the distrouctor of class costumer  ............
+	}
+};
+class user:public costumer
+{
+	private:
+		string name; 
+		int houseno;
+		string area;
+		string city; 
+	    string phoneno;
+		public:
+			user()
+			{
+				//default constrouctor............
+			}
+			user(string name,int houseno,string area,string city,double phoneno)
+			{
+		this->name=name; 
+		this->houseno=houseno;
+		this->area=area;
+		this->city=city; 
+		this->phoneno=phoneno;
+			}
+			
+			void user_detail(void)
+			{
+				cout<<endl;
+				cout<<"Enter your Details "<<endl;
+				 
+				cin.ignore();
+				cout<<"Enter Name"<<endl;
+				getline(cin,name); 
+				
+				cout<<"Enter House NO "<<endl; 
+//				cin>>houseno;
+//int houseno; 
+while (!(cin>>houseno))
+	{
+	cout <<"Error: Enter Any Number "<<endl;	
+		cin.clear();
+		cin.ignore();
+		
+	}
+
+				
+				cin.ignore();
+				cout<<"Enter Area "<<endl; 
+				getline(cin,area); 
+				
+				
+				cout<<"Enter City "<<endl; 
+				getline(cin, city); 
+				 
+				cout<<"Phone Number "<<endl;
+			//	cin>>phoneno;
+                while (!(cin>>phoneno))
+	            {
+	            cout <<"Error: Enter Any Number "<<endl;	
+		        cin.clear();
+		        cin.ignore();
+		
+	        }
+				} 
+ void Display_costumer_data()
+{
+	
+	
+	cout<<name<<" your order will be delievered within 45 mins at " <<","<<houseno<<","<<area<<","<<city<<","<<phoneno<<endl;
+	                         
+	
+	}				 
+	~user()
+	{
+	// this is the destoructor of class user .............
+	}
+			
+		
+};
+int main()
+{
+	
+	user* u1 = new user();
+	u1->take_order(); 	  
+	u1->user_detail();
+	u1->Display_costumer_data();
+	delete u1;
+		return 0;
+} 
