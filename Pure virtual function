@@ -1,0 +1,72 @@
+#include <iostream>
+using namespace std;
+class Animals {
+	
+	protected:
+		
+	public: 
+	//pure virtual function 
+	virtual void sound()=0;	
+};
+class dog:public Animals {
+	
+	private:
+		 
+	public:
+	
+	void sound()
+	{
+		cout <<"Dog:Woof "<<endl;
+	 } 
+		 
+};
+
+class crow: public Animals{
+	private: 
+	
+	public :
+		void sound()
+		{
+			cout <<"Crow:kakakaka "<<endl; 
+		}
+		
+};
+
+class bark: public dog{
+	private : 
+	
+	public: 
+	void legs()
+	{
+	cout <<"The Dog has four legs "<<endl;	
+	}
+	 
+};
+
+class kaka: public crow {
+	
+	private:
+		
+		public : 
+		void legs_of_crow()
+		{
+			cout <<"The crow has two legs "<<endl; 
+			
+		}
+	
+};
+int main ()
+{
+dog* d1 = new bark;
+    d1->sound();
+    d1->legs();
+
+    crow* c1 = new kaka;
+    c1->sound();
+    c1->legs_of_crow();
+
+    delete d1;
+    delete c1;
+
+	return 0;
+}
