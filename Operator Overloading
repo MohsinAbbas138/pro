@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std; 
+class Test{
+	private: 
+	int a=7;
+	int b=7;
+	public:
+		Test ()
+		{
+			int a;
+			int b; 
+			
+			a=a;
+			b=b;
+		}
+		void print_data()
+		{
+			cout <<"the value of a is "<<a<<endl;
+		//cout <<"the value of b is "<<b<<endl;  
+		}
+		void operator ++()
+		{
+			++a;
+		}
+		void operator --(int)
+		{
+			a--;
+		}
+		void operator ==(Test& t2)
+		{
+			if (a==b)
+			{
+				cout <<"the values are equals "<<endl; 
+			}
+			else 
+			{
+				cout <<"the values are not equals "<<endl;
+			}
+			
+		}
+		
+};
+
+int main ()
+{
+	Test t1,t2; 
+	t1.print_data();
+	++t1;
+	t1.print_data();
+t1--;
+t1.print_data();
+t1==t2; 
+	return 0;
+}
