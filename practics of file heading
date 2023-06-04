@@ -1,0 +1,46 @@
+#include <iostream>
+#include <fstream>
+using namespace std; 
+int main ()
+{
+//	
+//	string manu[]={"barger","ice_cream","chicken_tikka",
+//	"chicken_roll","chicken_shoarama","chicken_shoarama"};
+//	cout <<"Manu of Al-Raza Resturent "<<endl;
+//	for (int i=0; i<7; i++)
+//	{	
+//		cout<<manu[i]<<endl;
+//	}
+//	
+//	
+//	
+//	//string filename=;
+	
+	
+//	
+//	ifstream infile("list.txt");
+//	string name="MH654"; 
+//	infile>>name; 
+//	    infile.close();
+//    
+//	
+//																					
+	ofstream outfile("list.txt");
+	string name1;
+	cout<<"Enter name"<<endl;  
+	getline(cin, name1);
+	cout <<"Name "<<name1<<endl; 
+	outfile<<"Name "<<name1<<endl;
+	outfile.close();
+	
+	
+	ifstream infile("list.txt");
+	string name2; 
+	cout<<"Enter your name "<<endl; 
+	getline(cin, name2);
+	cout <<"Name "<<name2<<endl; 
+	    infile.close();
+	
+	return 0;
+	
+}
