@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+class Test{
+	
+	private : 
+	public: 
+	virtual void display_data()
+	{
+		cout <<"This is the data of test class "<<endl; 
+	}
+	
+};
+class Test2:public Test{
+	private:
+		public: 
+		void display_data ()
+		{
+			cout <<"This is the data of the test 2 class "<<endl; 
+		}
+	
+	
+};
+int main ()
+{
+	Test* ptr=new Test2();
+	ptr->display_data();
+	delete ptr; 
+	return 0; 
+	
+	
+}
