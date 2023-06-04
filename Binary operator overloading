@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std; 
+class Test {
+	
+	int a; 
+	int b; 
+	public:
+	Test ()
+	{
+		// default constrouctor 
+		
+	 } 
+	Test (int a,int b)
+	{
+		this->a=a;
+		this->b=b;
+		
+	}
+	
+	void print_data()
+	{
+		cout<<"The value of a is "<<a<<endl; 
+		cout <<"the value of b is "<<b<<endl; 
+	
+	}
+	Test operator + (Test& t2)
+	{
+		Test t3; 
+		t3.a=this->a+t2.a;
+		t3.b=this->b+t2.b; 
+		return t3; 
+	}
+	
+};
+
+
+int main ()
+{
+	Test t1(5,6);
+	Test t2(4,7);
+	Test sum;  
+t1.print_data();
+t2.print_data();
+sum=t1+t2; 
+sum.print_data();
+return 0;
+
+	
+}
