@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std; 
+int main ()
+{
+	int num; 
+	cout <<"Enter number "<<endl; 
+	while (!(cin>>num))
+	{
+		cout <<"Error: Enter the number "<<endl; 
+		
+		cin.clear();// clear the previous input ......
+		cin.ignore();//Discard the previous input .......
+	}
+	cout <<"Number: "<<num<<endl; 
+	return 0;
+}
