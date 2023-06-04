@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+template <class t>
+class Test
+{
+	t a; 
+	t b; 
+	t c; 
+	
+	public:
+		Test ()
+		{
+			t a; 
+			t b; 
+			t c; 
+			this->a=a;
+			this->b=b;
+			this->c=c;
+		}
+	void print_data()
+	{
+		//int a; 
+		//int b; 
+		//int c;
+		cout <<"Enter the 1st Number "<<endl; 
+		cin>>a;
+		cout <<"Enter the 2nd Number "<<endl; 
+		cin>>b;
+		
+		if (b==0)
+		{
+			try
+			{
+				throw "0 is not devide any number ";
+				
+			}
+			catch (char* msg)
+			{
+				cout <<msg<<endl; 
+			}
+		}
+		
+		c=a/b;
+		cout <<"value of c is: "<<c<<endl; 
+		
+		
+	}
+};
+
+int main ()
+{
+	Test <int>t1; 
+	t1.print_data();
+	Test <float>t2; 
+	t2.print_data();
+
+	return 0;
+	
+}
